@@ -1,0 +1,60 @@
+$primary: #5265E1;
+$secondary: #FA5959;
+
+@import "./node_modules/bootstrap/scss/_functions";
+@import "./node_modules/bootstrap/scss/_variables";
+$nav-tabs-link-active-border-color: transparent transparent orange;
+$nav-tabs-link-hover-border-color: transparent transparent orange;
+$nav-link-color: grey;
+$nav-link-hover-color: $secondary;
+
+$accordion-button-color: $primary;
+$accordion-button-active-color: $secondary;
+$accordion-button-focus-border-color: $secondary;
+$accordion-button-focus-box-shadow: transparent;
+$accordion-button-active-bg: white;
+
+$custom-theme-colors: (
+    "blaufosc": rgb(40, 45, 70)
+);
+
+$theme-colors: map-merge($custom-theme-colors, $theme-colors);
+
+
+.btn-primary:hover {
+    border: 1px solid $primary !important;
+    background-color: white !important;
+    color: $primary !important;
+}
+
+.btn-secondary:hover {
+    border: 1px solid $secondary !important;
+    background-color: white !important;
+    color: $secondary !important;
+}
+
+.btn-light:hover {
+    border: 1px solid black !important;
+    background-color: white !important;
+    color: black !important;
+}
+
+.hover-secondary:hover {
+    color: $secondary !important;
+}
+
+.carta {
+
+    @extend .rounded, .shadow, .col-12, .col-md-3, .p-2, .mx-md-2, .bg-white;
+
+    &:nth-child(3n) {
+        margin-top: 2em;
+    }
+
+    &:nth-child(3n+2) {
+        margin-top: 1em;
+    }
+
+}
+
+@import "./node_modules/bootstrap/scss/bootstrap";
